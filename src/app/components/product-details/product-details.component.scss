@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+
+@mixin product-details-theme($mat-theme) {
+  h6 {
+    color: mat-color($accent, 400);
+  }
+}
+
+.col-8 {
+  padding-left: 0;
+  padding-right: 0;
+}

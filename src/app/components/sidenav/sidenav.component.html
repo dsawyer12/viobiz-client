@@ -1,0 +1,52 @@
+<div [class.dark-theme]="isDark">
+  <mat-drawer-container class="drawer-container" autosize>
+    <mat-drawer class="drawer" mode="side" disableClose="true" opened="true">
+
+      <div class="d-flex row justify-content-around py-4 border-bottom">
+        <span *ngIf="isExpanded" class="ml-4">
+          <h3 style="font-family: 'Righteous', serif;">Viobiz</h3>
+        </span>
+        <!--        <button mat-icon-button (click)="toggleTheme()" matTooltip="Toggle dark theme">-->
+        <!--          <mat-icon>-->
+        <!--            brightness_6-->
+        <!--          </mat-icon>-->
+        <!--        </button>-->
+        <button mat-button class="nav-btn" (click)="isExpanded = !isExpanded" style="">
+          <mat-icon aria-label="Menu">menu</mat-icon>
+        </button>
+      </div>
+
+      <mat-nav-list>
+
+        <mat-list-item routerLink="/inventory" routerLinkActive="active">
+          <mat-icon mat-list-icon><i class="fas fa-box-open fa-sm"></i></mat-icon>
+          <h4 mat-line *ngIf="isExpanded">Inventory</h4>
+        </mat-list-item>
+
+        <mat-list-item>
+          <mat-icon mat-list-icon><i class="fas fa-car-alt fa-sm"></i></mat-icon>
+          <h4 mat-line *ngIf="isExpanded">Vehicles</h4>
+        </mat-list-item>
+
+        <mat-list-item>
+          <mat-icon mat-list-icon><i class="fas fa-images fa-sm"></i></mat-icon>
+          <h4 mat-line *ngIf="isExpanded">Media</h4>
+        </mat-list-item>
+
+        <mat-list-item>
+          <mat-icon mat-list-icon><i class="fas fa-book fa-sm"></i></mat-icon>
+          <h4 mat-line *ngIf="isExpanded">Audits</h4>
+        </mat-list-item>
+
+        <mat-list-item>
+          <mat-icon mat-list-icon><i class="fas fa-exclamation-triangle fa-sm"></i></mat-icon>
+          <h4 mat-line *ngIf="isExpanded">Reports</h4>
+        </mat-list-item>
+
+      </mat-nav-list>
+    </mat-drawer>
+
+    <router-outlet></router-outlet>
+
+  </mat-drawer-container>
+</div>

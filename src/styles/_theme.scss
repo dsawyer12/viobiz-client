@@ -1,0 +1,49 @@
+@import './variables';
+@import './components';
+
+@include mat-core();
+
+$mat-theme: mat-light-theme($primary, $accent, $warn);
+
+// ALERTS
+$alerts-palette: mat-palette($alert-collection, alert);
+$alert-theme: map_merge($mat-theme, (alert: $alerts-palette));
+$alert: map-get($alert-theme, alert);
+
+// LIGHT THEME
+$theme-palette: mat-palette($light-theme-collection, theme);
+$primary-theme: map_merge($mat-theme, (theme: $theme-palette));
+$theme: map-get($primary-theme, theme);
+
+// OTHER VARIABLES
+$primary: map-get($mat-theme, primary);
+$accent: map-get($mat-theme, accent);
+$foreground: map-get($mat-theme, foreground);
+//$background: map-get($theme, background);
+
+
+
+
+
+// Insert custom background color into theme
+//$background: map-get($theme, background);
+//$background: map_merge($background, (background: $bg-color));
+//$theme: map_merge($theme, (background: $background));
+
+
+
+// dark theme
+.dark-theme {
+  //$background: map_merge($background, (background: $dark-bg-color));
+  //$dark-theme: mat-dark-theme($md-primary, $md-base, $md-warn);
+  //
+  //// Insert custom background color into theme
+  //$background: map-get($dark-theme, background);
+  //$background: map_merge($background, (background: $dark-bg-color));
+  //$dark-theme: map_merge($dark-theme, (background: $background));
+  //
+  //@include angular-material-theme($dark-theme);
+}
+
+@include angular-material-theme($mat-theme);
+@include custom-themes($mat-theme);

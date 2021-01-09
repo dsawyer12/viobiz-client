@@ -1,0 +1,34 @@
+@import "./theme";
+@import "./components";
+
+html, body {
+  height: 100%;
+  width:100%;
+  box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  background-color: mat-color($theme, secondary) !important;
+  color: mat-color($accent, 400);
+}
+
+select.form-control {
+  text-indent: 0.40em;
+}
+
+button:focus {
+  outline: none;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+body {
+
+}
+

@@ -1,0 +1,124 @@
+@import '~@angular/material/theming';
+
+@import 'src/app/components/data-grid/data-grid.component';
+@import 'src/app/components/sidenav/sidenav.component';
+@import 'src/app/components/product/product.component';
+@import 'src/app/components/product-details/product-details.component';
+
+@mixin custom-themes($mat-theme) {
+  @include data-grid-theme($mat-theme);
+  @include sidenav-theme($mat-theme);
+  @include product-item-theme($mat-theme);
+  @include product-details-theme($mat-theme);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//// material ui components
+//
+//button.mat-button {
+//  border-radius: 0;
+//}
+//
+//.mat-tab-nav-bar {
+//  border: none;
+//}
+//
+//.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+//  background: none;
+//}
+//
+//button:focus {
+//  outline: none;
+//  border: 0;
+//}
+//
+//.btn:focus {
+//  box-shadow: none;
+//}
+//
+//* {
+//  scrollbar-width: thin;
+//  scrollbar-color:  #4D5863  #4D5863;
+//}
+//
+//// Works on Chrome/Edge/Safari
+//
+//*::-webkit-scrollbar {
+//  width: 12px;
+//}
+//*::-webkit-scrollbar-track {
+//  background:  #313131;
+//}
+//*::-webkit-scrollbar-thumb {
+//  background-color: #4D5863;
+//  border-radius: 20px;
+//}
+//
+//// Form Fields
+//
+//.form-control {
+//  background-color: #262A2B !important;
+//  border-color: #4D5863 !important;
+//  color: white !important;
+//  caret-color : white;
+//}
+//
+//select.form-control {
+//  text-indent: 0.35em;
+//}
+//
+//.form-control:focus {
+//  background-color: #262A2B !important;
+//  border-color: #4D5863 !important;
+//  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 132, 255, 0.5);
+//  caret-color : white;
+//}
+//
+//input:-webkit-autofill, input:-webkit-autofill:hover,
+//input:-webkit-autofill:focus, input:-webkit-autofill:active  {
+//  box-shadow: 0 0 0 30px #262A2B inset !important;
+//  -webkit-box-shadow: 0 0 0 30px #262A2B inset !important;
+//  -webkit-text-fill-color: white !important;
+//  color: white !important;
+//  caret-color : white;
+//}
+//
+//// Ag-Grid
+//
+//@import "~ag-grid-community/src/styles/ag-grid.scss";
+//@import "~ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin";
+//
+//.ag-theme-alpine {
+//  @include ag-theme-alpine((
+//    foreground-color: #fff,
+//    alpine-active-color: mat-color($primary, default),
+//    background-color: #262A2B,
+//    odd-row-background-color: #292e30,
+//    header-background-color: #292e30,
+//    borders: false,
+//    font-family: ("Helvetica Neue", sans-serif),
+//    font-size: 13px,
+//    control-panel-background-color:  #424242,
+//    popup-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3),
+//    input-focus-border-color:  #4D5863,
+//    input-border-color:  #4D5863,
+//  ));
+//
+//  .ag-cell-focus, .ag-cell-no-focus{
+//    border:none !important;
+//  }
+//
+//  .ag-row-hover {
+//    cursor: pointer;
+//  }
+//}

@@ -1,0 +1,26 @@
+@import '~@angular/material/theming';
+
+@mixin product-item-theme($mat-theme) {
+  .root {
+    height: 100%;
+    overflow: auto;
+    background-color: mat-color($theme, primary);
+
+    .actionbar {
+      background-color: mat-color($theme, secondary);
+      box-shadow: 5px 5px 18px mat-color($theme, dark);
+    }
+
+    .actions {
+      border-bottom: 1px solid mat-color($accent, 100);
+    }
+
+    .mat-ink-bar {
+      background-color: mat-color($primary) !important;
+    }
+
+    .content {
+      background-color: mat-color($theme, secondary);
+    }
+  }
+}

@@ -1,0 +1,183 @@
+<div class="p-5">
+
+  <!-- general -->
+  <div class="pb-5">
+    <header>
+      <h6>General</h6>
+    </header>
+    <hr>
+
+    <div class="form-group row pt-4">
+      <label for="name" class="col-2 col-form-label text-right">Product Name</label>
+      <div class="col-8">
+        <input id="name" type="text" class="form-control" autocomplete="off" [formControl]="productName">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="sku" class="col-2 col-form-label text-right">SKU</label>
+      <div class="col-8">
+        <input id="sku" type="text" class="form-control" autocomplete="off" [formControl]="sku">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="productType" class="col-2 col-form-label text-right">Type</label>
+      <select class="form-control col-8" name="product-type" id="productType">
+        <option value="Front Bumper">Front Bumper</option>
+        <option value="Rear Bumper">Rear Bumper</option>
+        <option value="Skid Plate Kit">Skid Plate Kit</option>
+      </select>
+      <div class="col-2">
+        <button class="new-btn btn btn-outline-primary">
+          <i class="fas fa-plus fa-sm"></i>
+          <span style="margin-left: 10px;">New</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="brand" class="col-2 col-form-label text-right">Brand</label>
+      <select class="form-control col-8" name="brand" id="brand">
+        <option value="Rival">Rival</option>
+        <option value="Moose">Moose</option>
+      </select>
+      <div class="col-2">
+        <button class="new-btn btn btn-outline-primary">
+          <i class="fas fa-plus fa-sm"></i>
+          <span style="margin-left: 10px;">New</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="supplier" class="col-2 col-form-label text-right">Supplier</label>
+      <select class="form-control col-8" name="supplier" id="supplier">
+        <option value="none">---- None ----</option>
+      </select>
+      <div class="col-2">
+        <button class="new-btn btn btn-outline-primary">
+          <i class="fas fa-plus fa-sm"></i>
+          <span style="margin-left: 10px;">New</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- specifications -->
+  <div class="pb-5">
+    <header>
+      <h6>Specifications</h6>
+    </header>
+    <hr>
+    <!-- dimensions -->
+    <div class="form-row pt-4">
+      <div class="form-group col-3">
+        <label for="length" class="text-right">Length:</label>
+        <input id="length" type="number" class="form-control" autocomplete="off" [formControl]="length">
+      </div>
+
+      <div class="form-group col-3">
+        <label for="width" class="text-right">Width:</label>
+        <input id="width" type="number" class="form-control" autocomplete="off" [formControl]="width">
+      </div>
+
+      <div class="form-group col-3">
+        <label for="height" class="text-right">Height:</label>
+        <input id="height" type="number" class="form-control" autocomplete="off" [formControl]="height">
+      </div>
+
+      <div class="form-group col-1">
+        <label for="dims-unit">Unit</label>
+        <select class="form-control" autocomplete="off" name="dims-unit" id="dims-unit">
+          <option value="none">in.</option>
+          <option value="none">cm</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- weight -->
+    <div class="form-row">
+      <div class="col-6"></div>
+
+      <div class="form-group col-3">
+        <label for="weight" class="text-right">Weight:</label>
+        <input id="weight" type="number" class="form-control" autocomplete="off" [formControl]="weight">
+      </div>
+
+      <div class="form-group col-1">
+        <label for="weight-unit">Unit</label>
+        <select class="form-control" name="weight-unit" id="weight-unit">
+          <option value="none">lbs.</option>
+          <option value="none">kg</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- price lists -->
+  <div class="pb-5">
+    <div class="d-flex row align-middle">
+      <header>
+        <h6>Price Lists</h6>
+      </header>
+      <button class="flat-btn mat-flat-button">
+        <i class="fas fa-plus fa-sm"></i>
+        <span style="margin-left: 10px;">New</span>
+      </button>
+    </div>
+    <hr>
+
+    <div class="row pt-4">
+      <div class="form-group col-3">
+        <label for="buy">Buy</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">$</div>
+          </div>
+          <input id="buy" type="number" class="form-control" [formControl]="buy">
+        </div>
+      </div>
+
+      <div class="form-group col-3">
+        <label for="wholesale">Wholesale</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">$</div>
+          </div>
+          <input id="wholesale" type="number" class="form-control" [formControl]="wholesale">
+        </div>
+      </div>
+
+      <div class="form-group col-3">
+        <label for="retail">Retail</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">$</div>
+          </div>
+          <input id="retail" type="number" class="form-control" [formControl]="retail">
+        </div>
+      </div>
+
+      <div class="form-group col-3">
+        <label for="retail">Retail</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">$</div>
+          </div>
+          <input id="x" type="number" class="form-control" [formControl]="retail">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- product info -->
+  <div class="pb-5">
+    <header>
+      <h6>Product Info</h6>
+    </header>
+
+
+  </div>
+</div>

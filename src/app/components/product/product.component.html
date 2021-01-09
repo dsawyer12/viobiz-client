@@ -1,0 +1,30 @@
+<div class="root container-fluid">
+
+  <div class="actionbar sticky-top row">
+    <div class="actions col-4">
+      <!-- breadcrumbs -->
+    </div>
+
+    <!-- actionbar -->
+    <div class="actions col-8 p-2">
+      <button mat-raised-button color="primary" class="mr-3 float-right">Save All</button>
+    </div>
+
+    <div class="container pt-4">
+      <nav mat-tab-nav-bar>
+        <a mat-tab-link *ngFor="let tab of tabLinks"
+           [routerLink]="tab.path"
+           (click)="activeTab = tab"
+           [active]="activeTab == tab"> {{tab.label}}
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- tabs -->
+  <div class="container">
+    <div class="content mt-3 mb-5 border rounded">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

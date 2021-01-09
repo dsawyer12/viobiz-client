@@ -1,0 +1,232 @@
+@import "~@angular/material/theming";
+
+$md-primary: (
+  50 : #e3f1ff,
+  100 : #b9dcff,
+  200 : #8ac5ff,
+  300 : #5badff,
+  400 : #389cff,
+  500 : #158aff,
+  600 : #1282ff,
+  700 : #0f77ff,
+  800 : #0c6dff,
+  900 : #065aff,
+  A100 : #ffffff,
+  A200 : #f3f7ff,
+  A400 : #c0d2ff,
+  A700 : #a7c0ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+// accent
+$md-base: (
+  50 : #e6e7e8,
+  100 : #c1c3c6,
+  200 : #979ba0,
+  300 : #6d7279,
+  400 : #4e545d,
+  500 : #2f3640,
+  600 : #2a303a,
+  700 : #232932,
+  800 : #1d222a,
+  900 : #12161c,
+  A100 : #619cff,
+  A200 : #2e7cff,
+  A400 : #005efa,
+  A700 : #0054e0,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+$ag-grid: (
+  50 : #e5e6e6,
+  100 : #bfc0c1,
+  200 : #949798,
+  300 : #696d6e,
+  400 : #494d4f,
+  500 : #292e30,
+  600 : #24292b,
+  700 : #1f2324,
+  800 : #191d1e,
+  900 : #0f1213,
+  A100 : #59c8ff,
+  A200 : #26b7ff,
+  A400 : #00a1f2,
+  A700 : #0090d9,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+$md-success: (
+  50 : #e3fdeb,
+  100 : #b9face,
+  200 : #8af6ad,
+  300 : #5bf28c,
+  400 : #38f074,
+  500 : #15ed5b,
+  600 : #12eb53,
+  700 : #0fe849,
+  800 : #0ce540,
+  900 : #06e02f,
+  A100 : #ffffff,
+  A200 : #d5ffdb,
+  A400 : #a2ffb0,
+  A700 : #89ff9a,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$md-warn: (
+  50 : #fff9e8,
+  100 : #fef0c5,
+  200 : #fee79f,
+  300 : #fedd78,
+  400 : #fdd55b,
+  500 : #fdce3e,
+  600 : #fdc938,
+  700 : #fcc230,
+  800 : #fcbc28,
+  900 : #fcb01b,
+  A100 : #ffffff,
+  A200 : #fffefc,
+  A400 : #ffebc9,
+  A700 : #ffe2af,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$md-danger: (
+  50 : #ffe7e7,
+  100 : #ffc2c2,
+  200 : #ff9a9a,
+  300 : #ff7171,
+  400 : #ff5252,
+  500 : #ff3434,
+  600 : #ff2f2f,
+  700 : #ff2727,
+  800 : #ff2121,
+  900 : #ff1515,
+  A100 : #ffffff,
+  A200 : #fffbfb,
+  A400 : #ffc8c8,
+  A700 : #ffaeae,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$primary: mat-palette($md-primary, 500, 50, 700);
+$accent: mat-palette($md-base, 500, 50, 700);
+$warn: mat-palette($md-warn, 500, 700, 100);
+
+// Alerts palette
+$alert-collection: (
+  warning:    #fdce3e,
+  success:    #15ed5b,
+  danger:     #ff3434,
+  contrast: (
+    warning:  black,
+    success:  white,
+    danger:   white
+  )
+);
+
+// light theme colors
+$light-theme-collection: (
+  light: white,
+  primary: #eceff2,
+  secondary: #FBFCFD,
+  border: #E5E6E6,
+  dark: #C1C3C6,
+  contrast: (
+    light: black,
+    primary: black,
+    secondary: black,
+    border: black,
+    dark: black,
+  )
+);
