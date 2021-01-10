@@ -23,4 +23,14 @@
       background-color: mat-color($theme, secondary);
     }
   }
+
+  a.mat-tab-link {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 16px;
+  }
+
+  a.mat-tab-link:hover {
+    color: mat-color($primary);
+    text-decoration: none;
+  }
 }

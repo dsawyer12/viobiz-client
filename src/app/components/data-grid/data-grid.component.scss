@@ -9,20 +9,20 @@
   .ag-theme-alpine {
     @include ag-theme-alpine((
       foreground-color: mat-color($foreground),
-      data-color: mat-color($accent),
+      data-color: mat-color($accent, 400),
       alpine-active-color: mat-color($primary),
       selected-row-background-color: mat-color($primary, 100),
-      background-color: mat-color($theme, primary),
+      background-color: mat-color($theme, light),
       odd-row-background-color: mat-color($theme, secondary),
       header-background-color: mat-color($theme, light),
-      header-foreground-color: mat-color($accent),
-      border-color: mat-color($theme, dark),
-      row-border-color: mat-color($theme, border),
+      header-foreground-color: mat-color($accent, 400),
+      //border-color: mat-color($theme, dark),
+      //row-border-color: mat-color($theme, border),
       font-family: ("Segoe UI", sans-serif),
       font-size: 14px,
-      control-panel-background-color:  mat-color($accent, 50),
+      control-panel-background-color:  mat-color($theme, light),
       popup-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3),
-      input-focus-border-color:  mat-color($primary, A700),
+      input-focus-border-color:  mat-color($primary, 200),
       input-border-color:  mat-color($theme, border),
     ));
 
@@ -36,6 +36,10 @@
 
     .ag-row-hover {
       cursor: pointer;
+    }
+
+    .ag-paging-panel {
+      background-color: mat-color($theme, light);
     }
   }
 }

@@ -15,6 +15,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatTreeModule} from '@angular/material/tree';
 
 @NgModule({
   exports: [
@@ -33,7 +34,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatSelectModule,
     MatPaginatorModule,
     MatTabsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTreeModule
   ],
 })
 export class MaterialModule {}

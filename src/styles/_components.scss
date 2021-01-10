@@ -1,9 +1,9 @@
 @import '~@angular/material/theming';
 
-@import 'src/app/components/data-grid/data-grid.component';
-@import 'src/app/components/sidenav/sidenav.component';
-@import 'src/app/components/product/product.component';
-@import 'src/app/components/product-details/product-details.component';
+@import '~src/app/components/data-grid/data-grid.component';
+@import '~src/app/components/sidenav/sidenav.component';
+@import '~src/app/components/product/product.component';
+@import '~src/app/components/product-details/product-details.component';
 
 @mixin custom-themes($mat-theme) {
   @include data-grid-theme($mat-theme);

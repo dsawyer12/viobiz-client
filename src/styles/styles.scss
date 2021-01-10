@@ -31,7 +31,26 @@ button:focus {
   box-shadow: none;
 }
 
-body {
+.mat-checkbox .mat-checkbox-frame {
+  border: 1px solid mat-color($theme, dark);
+  width: 1.3em;
+  height: 1.3em;
+}
 
+.mat-checkbox-checked .mat-checkbox-background {
+  width: 1.3em;
+  height: 1.3em;
+}
+
+.mat-checkbox-label {
+  font-family: "Segoe UI", sans-serif !important;
+}
+
+label {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
 }
 

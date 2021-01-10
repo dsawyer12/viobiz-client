@@ -30,20 +30,20 @@ export class DataGridComponent implements OnInit {
     private productService: ProductService
   ) {
     this.columnDefs = [
-      { field: '_id'},
-      { field: 'name'},
-      { field: 'type'},
-      { field: 'sku'},
-      { field: 'brand'},
-      { field: 'supplier'},
-      // { field: 'dimensions'},
-      // { field: 'weight'},
-      { field: 'stockOnHand'},
-      { field: 'availableStock'},
-      // { field: 'shortDescription'},
-      // { field: 'description'},
-      // { field: 'fitment'},
-      // { field: 'link'}
+      { field: '_id' },
+      { field: 'name', flex: 1 },
+      { field: 'type' },
+      { field: 'sku' },
+      { field: 'brand' },
+      { field: 'supplier' },
+      // { field: 'dimensions' },
+      // { field: 'weight' },
+      { field: 'stockOnHand' },
+      { field: 'availableStock' },
+      // { field: 'shortDescription' },
+      // { field: 'description' },
+      // { field: 'fitment' },
+      // { field: 'link' }
     ];
 
     this.defaultColDef = {
@@ -53,7 +53,6 @@ export class DataGridComponent implements OnInit {
       filter: true,
     };
     this.rowSelection = 'single';
-    this.paginationPageSize = 10;
     this.paginationNumberFormatter = (params) => {
       return '[' + params.value.toLocaleString() + ']';
     };
@@ -70,10 +69,6 @@ export class DataGridComponent implements OnInit {
       .subscribe((res: Product[]) => {
         this.rowData = res;
       });
-  }
-
-  onPageSizeChanged(newPageSize): void {
-    this.gridApi.paginationSetPageSize(Number(newPageSize));
   }
 
   onGridReady(params): void {

@@ -5,10 +5,16 @@
     margin: 0;
     color: mat-color($accent, 400);
   }
-}
 
-.mat-button {
-  line-height: 0;
+  button.btn-link {
+    color: mat-color($primary);
+    line-height: 0;
+  }
+
+  button.btn-link:hover, button.btn-link:focus {
+    color: mat-color($primary);
+    text-decoration: none;
+  }
 }
 
 .col-8 {
@@ -17,5 +23,5 @@
 }
 
 .ql-container.ql-snow {
-  min-height: 100px;
+  min-height: 180px;
 }
