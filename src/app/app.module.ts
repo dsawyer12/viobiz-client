@@ -13,6 +13,9 @@ import { MaterialModule } from './material/material.module';
 // ag-grid
 import { AgGridModule } from 'ag-grid-angular';
 
+// ngx-quill editor
+import { QuillModule } from 'ngx-quill';
+
 // components
 import { DataGridComponent } from './components/data-grid/data-grid.component';
 import { ProductComponent } from './components/product/product.component';
@@ -39,7 +42,8 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     AgGridModule.withComponents([]),
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    QuillModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

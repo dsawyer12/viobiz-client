@@ -2,11 +2,20 @@
 
 @mixin product-details-theme($mat-theme) {
   h6 {
+    margin: 0;
     color: mat-color($accent, 400);
   }
+}
+
+.mat-button {
+  line-height: 0;
 }
 
 .col-8 {
   padding-left: 0;
   padding-right: 0;
+}
+
+.ql-container.ql-snow {
+  min-height: 100px;
 }

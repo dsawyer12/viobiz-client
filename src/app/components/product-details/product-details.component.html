@@ -71,7 +71,7 @@
     </header>
     <hr>
     <!-- dimensions -->
-    <div class="form-row pt-4">
+    <div class="form-row pt-4 mx-2">
       <div class="form-group col-3">
         <label for="length" class="text-right">Length:</label>
         <input id="length" type="number" class="form-control" autocomplete="off" [formControl]="length">
@@ -87,7 +87,7 @@
         <input id="height" type="number" class="form-control" autocomplete="off" [formControl]="height">
       </div>
 
-      <div class="form-group col-1">
+      <div class="form-group col-3">
         <label for="dims-unit">Unit</label>
         <select class="form-control" autocomplete="off" name="dims-unit" id="dims-unit">
           <option value="none">in.</option>
@@ -97,7 +97,7 @@
     </div>
 
     <!-- weight -->
-    <div class="form-row">
+    <div class="form-row mx-2">
       <div class="col-6"></div>
 
       <div class="form-group col-3">
@@ -105,7 +105,7 @@
         <input id="weight" type="number" class="form-control" autocomplete="off" [formControl]="weight">
       </div>
 
-      <div class="form-group col-1">
+      <div class="form-group col-3">
         <label for="weight-unit">Unit</label>
         <select class="form-control" name="weight-unit" id="weight-unit">
           <option value="none">lbs.</option>
@@ -117,18 +117,18 @@
 
   <!-- price lists -->
   <div class="pb-5">
-    <div class="d-flex row align-middle">
+    <div class="d-flex justify-content-between">
       <header>
         <h6>Price Lists</h6>
       </header>
-      <button class="flat-btn mat-flat-button">
+      <button mat-button color="primary">
         <i class="fas fa-plus fa-sm"></i>
         <span style="margin-left: 10px;">New</span>
       </button>
     </div>
     <hr>
 
-    <div class="row pt-4">
+    <div class="row pt-4 mx-2">
       <div class="form-group col-3">
         <label for="buy">Buy</label>
         <div class="input-group">
@@ -172,12 +172,31 @@
 
   </div>
 
-  <!-- product info -->
+  <!-- Locations -->
   <div class="pb-5">
-    <header>
-      <h6>Product Info</h6>
-    </header>
+    <div class="d-flex justify-content-between">
+      <header>
+        <h6>Locations</h6>
+      </header>
+      <button mat-button color="primary">
+        <i class="fas fa-plus fa-sm"></i>
+        <span style="margin-left: 10px;">New</span>
+      </button>
+    </div>
+    <hr>
 
+    <div class="mx-2">
+      <div class="py-3">
+        <section class="form-group">
+          <mat-checkbox class="px-3" color="primary">Main </mat-checkbox>
+          <mat-checkbox class="px-3" color="primary">North Warehouse</mat-checkbox>
+          <mat-checkbox class="px-3" color="primary">South Warehouse</mat-checkbox>
+        </section>
+      </div>
 
+      <div>
+        <quill-editor></quill-editor>
+      </div>
+    </div>
   </div>
 </div>
