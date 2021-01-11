@@ -4,12 +4,14 @@
 @import '~src/app/components/sidenav/sidenav.component';
 @import '~src/app/components/product/product.component';
 @import '~src/app/components/product-details/product-details.component';
+@import '~src/app/components/product-fitment/product-fitment.component';
 
 @mixin custom-themes($mat-theme) {
   @include data-grid-theme($mat-theme);
   @include sidenav-theme($mat-theme);
   @include product-item-theme($mat-theme);
   @include product-details-theme($mat-theme);
+  @include product-fitment-theme($mat-theme);
 }
 
 

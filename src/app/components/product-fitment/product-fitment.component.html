@@ -1,1 +1,84 @@
-<p>product-fitment works!</p>
+<div class="p-5">
+
+  <header>
+    <h6>Search Vehicles</h6>
+  </header>
+  <hr>
+  <!-- add vehicle actionbar -->
+  <div class="d-flex row justify-content-center align-items-center pt-4 mx-2">
+        <div class="form-group col-3">
+      <label for="make">Select Make</label>
+      <mat-form-field appearance="fill">
+        <mat-select id="make" [formControl]="makeSelect" required>
+          <mat-option *ngFor="let make of makeRange" [value]="make">{{make}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="makeSelect.hasError('required')">Please select a make</mat-error>
+        <mat-hint>{{makeSelect.value?.name}}</mat-hint>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group col-3">
+      <label for="model">Select Model</label>
+      <mat-form-field appearance="fill">
+        <mat-select id="model" [formControl]="modelSelect" required>
+          <mat-option *ngFor="let model of modelRange" [value]="model">{{model}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="modelSelect.hasError('required')">Please select a model</mat-error>
+        <mat-hint>{{modelSelect.value?.name}}</mat-hint>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group col-3">
+      <label for="years">Select Years</label>
+      <mat-form-field appearance="fill">
+        <mat-select id="years" [formControl]="yearSelect" multiple required>
+          <mat-option *ngFor="let year of yearRange" [value]="year">{{year}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="yearSelect.hasError('required')">Please select a year</mat-error>
+        <mat-hint>{{yearSelect.value?.name}}</mat-hint>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group col-3">
+      <button mat-raised-button color="primary">Add</button>
+    </div>
+  </div>
+
+  <!-- Fitment table -->
+  <header>
+    <h6>This product fits</h6>
+  </header>
+  <hr>
+  <mat-table [dataSource]="fitments" class="mat-elevation-z8">
+    <!-- Make Column -->
+    <ng-container matColumnDef="make">
+      <mat-header-cell *matHeaderCellDef> Make </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.make}} </mat-cell>
+    </ng-container>
+
+    <!-- Model Column -->
+    <ng-container matColumnDef="model">
+      <mat-header-cell *matHeaderCellDef> Model </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.model}} </mat-cell>
+    </ng-container>
+
+    <!-- Years Column -->
+    <ng-container matColumnDef="year">
+      <mat-header-cell *matHeaderCellDef> Years </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.year[0] + " - " + element.year[element.year.length - 1]}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <mat-header-cell  *matHeaderCellDef class="d-flex justify-content-around"> Actions </mat-header-cell>
+      <mat-cell *matCellDef="let element" class="d-flex justify-content-center">
+        <button type="button" class="btn  btn-sm btn-outline-warning">Edit</button>
+        <button mat-icon-button class="remove-fitment-btn ml-3">
+          <i class="fas fa-minus fa-xs text-white"></i>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="colHeaders"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: colHeaders;"></mat-row>
+  </mat-table>
+</div>

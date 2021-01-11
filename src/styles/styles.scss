@@ -33,21 +33,39 @@ button:focus {
 
 .mat-checkbox .mat-checkbox-frame {
   border: 1px solid mat-color($theme, dark);
-  width: 1.3em;
-  height: 1.3em;
+  width: 1.3em !important;
+  height: 1.3em !important;
 }
 
 .mat-checkbox-checked .mat-checkbox-background {
-  width: 1.3em;
-  height: 1.3em;
+  width: 1.3em !important;
+  height: 1.3em !important;
 }
 
 .mat-checkbox-label {
   font-family: "Segoe UI", sans-serif !important;
 }
 
-label {
-  font-size: 14px;
+.mat-pseudo-checkbox {
+  border: 1px solid mat-color($theme, dark) !important;
+  width: 1.3em !important;
+  height: 1.3em !important;
+}
+
+.mat-pseudo-checkbox-checked::after {
+  top: 6px !important;
+  left: 4px !important;
+}
+
+.mat-header-cell {
+  font-size: 16px;
+  font-weight: 500;
+  color: mat-color($accent, 400);
+}
+
+.mat-cell {
+  font-size: 15px;
+  color: mat-color($accent, 400);
 }
 
 body {

@@ -3,4 +3,5 @@ export interface Vehicle {
     make: String;
     model: String;
     year: Number[]; // date year type instead
+  // add a url field for the vehicle image thumbnail.
 }
