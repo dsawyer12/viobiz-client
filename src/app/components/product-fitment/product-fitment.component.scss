@@ -2,6 +2,10 @@
 
 @mixin product-fitment-theme($mat-theme) {
   .remove-fitment-btn {
+    background-color: mat-color($alert, danger-light);
+  }
+
+  .remove-fitment-btn:hover {
     background-color: mat-color($alert, danger);
   }
 
