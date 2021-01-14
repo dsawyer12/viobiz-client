@@ -208,10 +208,12 @@ $alert-collection: (
   warning:    #fdce3e,
   success:    #15ed5b,
   danger:     #ff3434,
+  danger-light: #ff5252,
   contrast: (
     warning:  black,
     success:  white,
-    danger:   white
+    danger:   white,
+    danger-light: white
   )
 );
 

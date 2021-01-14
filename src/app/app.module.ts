@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,10 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 // material
 import { MaterialModule } from './material/material.module';
-
 // ag-grid
 import { AgGridModule } from 'ag-grid-angular';
-
 // ngx-quill editor
 import { QuillModule } from 'ngx-quill';
 
@@ -23,6 +21,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { ProductFitmentComponent } from './components/product-fitment/product-fitment.component';
 import { ProductMediaComponent } from './components/product-media/product-media.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { CellFilterComponent } from './component-utils/cell-filter/cell-filter.component';
 
 @NgModule({
   declarations: [
@@ -33,17 +32,20 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     ProductFitmentComponent,
     ProductMediaComponent,
     SidenavComponent,
+    CellFilterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    AgGridModule.withComponents([]),
+    AgGridModule.withComponents([
+      CellFilterComponent
+    ]),
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    QuillModule.forRoot()
+    QuillModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
