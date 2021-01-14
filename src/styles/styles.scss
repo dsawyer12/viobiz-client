@@ -42,7 +42,14 @@ button:focus {
   height: 1.3em !important;
 }
 
+label {
+  color: mat-color($accent, 400);
+}
+
 .mat-checkbox-label {
+  margin-left: 6px;
+  margin-top: 6px;
+  color: mat-color($accent, 400);
   font-family: "Segoe UI", sans-serif !important;
 }
 
