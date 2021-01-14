@@ -1,9 +1,8 @@
 import { Component, OnInit  } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/interfaces/product';
 import { ProductService } from 'src/app/services/product.service';
-import { Observable } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import {CellFilterComponent} from "../../component-utils/cell-filter/cell-filter.component";
 
 @Component({
   selector: 'app-data-grid',
@@ -24,6 +23,11 @@ export class DataGridComponent implements OnInit {
 
   selectedProduct: number;
 
+  frameworkComponents = {
+    /* custom filtering component */
+    cellFilterComponent: CellFilterComponent,
+  };
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -31,7 +35,7 @@ export class DataGridComponent implements OnInit {
   ) {
     this.columnDefs = [
       { field: '_id' },
-      { field: 'name', flex: 1 },
+      { field: 'name', flex: 1, filter: 'cellFilterComponent' },
       { field: 'type' },
       { field: 'sku' },
       { field: 'brand' },
@@ -51,6 +55,7 @@ export class DataGridComponent implements OnInit {
       resizable: true,
       sortable: true,
       filter: true,
+      menuTabs: ['filterMenuTab']
     };
     this.rowSelection = 'single';
     this.paginationNumberFormatter = (params) => {

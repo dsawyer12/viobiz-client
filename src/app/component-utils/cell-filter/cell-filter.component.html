@@ -1,0 +1,52 @@
+<div style="width: 250px">
+<!--  filter menus-->
+  <mat-button-toggle-group
+    appearance="legacy"
+    #group="matButtonToggleGroup"
+    [value]="selectedFilter"
+    (change)="onFilterChange(group.value)"
+    class="d-flex">
+    <mat-button-toggle class="col-4" value="left" aria-label="Text align left">
+      <i class="fas fa-filter fa-sm"></i>
+    </mat-button-toggle>
+    <mat-button-toggle class="col-4" value="center" aria-label="Text align center">
+      <i class="fas fa-bars fa-sm"></i>
+    </mat-button-toggle>
+    <mat-button-toggle class="col-4" value="right" aria-label="Text align right">
+      <i class="fas fa-columns fa-sm"></i>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+
+<!-- filter content -->
+  <div class="filter-content" [ngSwitch]="selectedFilter">
+    <!-- main menu filter -->
+    <div *ngSwitchCase="'left'">
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between">
+          <div>
+            <i class="fas fa-thumbtack fa-sm mr-3"></i>
+            Pin Column
+          </div>
+          <div>
+            <i class="fas fa-caret-right"></i>
+          </div>
+        </li>
+        <li class="list-group-item">Autosize This Column</li>
+        <li class="list-group-item">Autosize All Columns</li>
+        <li class="list-group-item">Rest Columns</li>
+      </ul>
+    </div>
+    <!-- search filter -->
+    <div *ngSwitchCase="'center'">
+      search filter
+    </div>
+    <!-- column filter -->
+    <div *ngSwitchCase="'right'">
+      <mat-selection-list #cols>
+        <mat-list-option *ngFor="let col of colDefs">
+          {{col}}
+        </mat-list-option>
+      </mat-selection-list>
+    </div>
+  </div>
+</div>
