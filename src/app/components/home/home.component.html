@@ -1,0 +1,32 @@
+<div class="h-100 w-100">
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand ml-3" href="#"> <h3 style="font-family: 'Righteous', serif;">Viobiz</h3> </a>
+    <div class="nav-links mr-auto ml-5">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/inventory" routerLinkActive="active">Inventory</a>
+        </li>
+      </ul>
+    </div>
+
+    <span class="navbar-text mr-3">
+      <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+    </span>
+    <span class="navbar-text mr-4">
+      <a class="nav-link" routerLink="/register" routerLinkActive="active">Sign Up</a>
+    </span>
+  </nav>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
