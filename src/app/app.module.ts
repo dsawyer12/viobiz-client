@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
+// apollo-angular
+import { GraphQLModule } from './graphql.module';
 // material
 import { MaterialModule } from './material/material.module';
 // ag-grid
@@ -22,6 +24,9 @@ import { ProductFitmentComponent } from './components/product-fitment/product-fi
 import { ProductMediaComponent } from './components/product-media/product-media.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { CellFilterComponent } from './component-utils/cell-filter/cell-filter.component';
+import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +38,9 @@ import { CellFilterComponent } from './component-utils/cell-filter/cell-filter.c
     ProductMediaComponent,
     SidenavComponent,
     CellFilterComponent,
+    LoginComponent,
+    HomeComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +54,7 @@ import { CellFilterComponent } from './component-utils/cell-filter/cell-filter.c
     HttpClientModule,
     FormsModule,
     QuillModule.forRoot(),
+    GraphQLModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
