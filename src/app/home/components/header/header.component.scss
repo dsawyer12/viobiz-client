@@ -1,0 +1,46 @@
+@import '../../../../../node_modules/@angular/material/theming';
+
+@mixin header-theme($mat-theme) {
+  .navbar {
+    background-color: mat-color($accent);
+    border-bottom: mat-color($theme, dark);
+  }
+
+  .navbar-brand h3 {
+    color: mat-color($theme, primary);
+  }
+
+  a {
+    color: mat-color($theme, primary);
+    font-size: 18px;
+  }
+
+  a:hover {
+    color: mat-color($primary, 300);
+  }
+
+  .content {
+    height: 100vh;
+    background-image: linear-gradient(#2f3640, #12161c);
+  }
+}
+
+.nav-links ul li {
+  padding: 0 12px;
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+
+}

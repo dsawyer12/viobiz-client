@@ -1,14 +1,14 @@
 @import '~@angular/material/theming';
 
-@import '~src/app/components/home/home.component';
-@import '~src/app/components/data-grid/data-grid.component';
-@import '~src/app/components/sidenav/sidenav.component';
-@import '~src/app/components/product/product.component';
-@import '~src/app/components/product-details/product-details.component';
-@import '~src/app/components/product-fitment/product-fitment.component';
+@import '../app/home/components/header/header.component';
+@import '../app/admin/components/data-grid/data-grid.component';
+@import '../app/admin/components/sidenav/sidenav.component';
+@import '../app/admin/components/product/product.component';
+@import '../app/admin/components/product-details/product-details.component';
+@import '../app/admin/components/product-fitment/product-fitment.component';
 
 @mixin custom-themes($mat-theme) {
-  @include home-theme($mat-theme);
+  @include header-theme($mat-theme);
   @include data-grid-theme($mat-theme);
   @include sidenav-theme($mat-theme);
   @include product-item-theme($mat-theme);

@@ -4,7 +4,7 @@ import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 import gql from 'graphql-tag';
-import { User, Query } from './models/user.type';
+import { User, Query } from './core/models/user.type';
 
 @Component({
   selector: 'app-root',
