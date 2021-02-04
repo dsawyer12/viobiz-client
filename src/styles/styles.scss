@@ -9,7 +9,7 @@ html, body {
   width:100%;
   box-sizing: border-box;
   margin: 0;
-  overflow: hidden;
+  //overflow: hidden;
 }
 
 .form-control:focus {
@@ -50,7 +50,7 @@ label {
   margin-left: 6px;
   margin-top: 6px;
   color: mat-color($accent, 400);
-  font-family: "Segoe UI", sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 .mat-pseudo-checkbox {
@@ -76,6 +76,6 @@ label {
 }
 
 body {
-  font-family: "Segoe UI", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 

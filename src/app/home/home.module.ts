@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { IndexComponent } from './components/index/index.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     FooterComponent,
     LoginComponent,
     SignUpComponent,
+    IndexComponent,
   ],
   exports: [
     HomeComponent,

@@ -1,1 +1,49 @@
-<p>sign-up works!</p>
+<div class="register-top-content">
+
+</div>
+
+<div class="register-card d-flex justify-content-center">
+  <mat-card class="col-xs-12 col-sm-9 col-md-6 col-lg-5">
+    <div class="auth-wrapper">
+      <form class="form-register" [formGroup]="registerForm" (ngSubmit)="registerUser()">
+        <h3 class="h3 mb-3 font-weight-normal text-center">Sign up</h3>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>First Name</label>
+            <input type="text" class="form-control" formControlName="firstName" placeholder="First Name" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label>Last Name</label>
+            <input type="text" class="form-control" formControlName="lastName" placeholder="Last Name" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label>Email</label>
+            <input type="email" class="form-control" formControlName="email" placeholder="Your Email" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label>Password</label>
+            <input type="password" class="form-control" formControlName="password" placeholder="Password">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label>Confirm Password</label>
+            <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Password">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <button type="submit" class="btn btn-block btn-primary">Sign in</button>
+        </div>
+      </form>
+    </div>
+  </mat-card>
+</div>

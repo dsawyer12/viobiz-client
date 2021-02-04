@@ -1,6 +1,6 @@
-@import '../../../../../node_modules/@angular/material/theming';
-@import "../../../../../node_modules/ag-grid-community/src/styles/ag-grid";
-@import "../../../../../node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin";
+@import '~node_modules/@angular/material/theming';
+@import "~node_modules/ag-grid-community/src/styles/ag-grid";
+@import "~node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin";
 
 // Define a mixin that accepts a theme and outputs the color styles for the component.
 @mixin data-grid-theme($mat-theme) {

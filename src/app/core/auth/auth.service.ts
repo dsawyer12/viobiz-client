@@ -21,7 +21,7 @@ export class AuthService {
   }
 
   // Sign-up
-  signUp(user: User): Observable<any> {
+  registerUser(user: User): Observable<any> {
     const api = `${this.endpoint}/register`;
     return this.http.post(api, user)
       .pipe(
@@ -34,7 +34,7 @@ export class AuthService {
     return this.http.post<any>(`${this.endpoint}/signin`, user)
       .subscribe((res: any) => {
         localStorage.setItem('access_token', res.token);
-        this.getUserProfile(res._id).subscribe((res) => {
+        this.getUserProfile(res._id).subscribe(() => {
           this.currentUser = res;
           this.router.navigate(['user-profile/' + res.msg._id]);
         });
